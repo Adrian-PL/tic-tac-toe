@@ -33,13 +33,14 @@ fun turn () {
         } else if (map[y.toInt() - 1][z.toInt() - 1] != '_') {
             println("This cell is occupied! Choose another one!")
         } else if (map[y.toInt() - 1][z.toInt() - 1] == '_') {
-            if (player % 2 != 0) {
+            if (player == 1) {
                 map[y.toInt() - 1][z.toInt() - 1] = 'X'
+                player = 2
             } else {
                 map[y.toInt() - 1][z.toInt() - 1] = 'O'
+                player = 1
             }
             mapMaker()
-            player++
             break
         }
     }
