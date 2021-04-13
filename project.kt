@@ -1,6 +1,6 @@
 import java.util.Scanner
 
-var finish = "Draw"
+var finish = "Draw!"
 var player = 1
 val sc = Scanner(System.`in`)
 val map = arrayOf(
@@ -50,29 +50,29 @@ fun checkMap () {
     for (i in map.indices) {
         for (j in map.indices) {
             if ('O' !in map[i] && '_' !in map[i]) {
-                finish = "X wins"
+                finish = "X wins!"
             }
             if ('X' !in map[i] && '_' !in map[i]) {
-                finish = "O wins"
+                finish = "O wins!"
             }
             if (map[0][0] == 'X' && map[0][0] == map[1][1] && map[1][1] == map[2][2]) {
-                finish = "X wins"
+                finish = "X wins!"
             }
             if (map[0][0] == 'O' && map[0][0] == map[1][1] && map[1][1] == map[2][2]) {
-                finish = "O wins"
+                finish = "O wins!"
             }
             if (map[0][2] == 'X' && map[0][2] == map[1][1] && map[1][1] == map[2][0]) {
-                finish = "X wins"
+                finish = "X wins!"
             }
             if (map[0][2] == 'O' && map[0][2] == map[1][1] && map[1][1] == map[2][0]) {
-                finish = "O wins"
+                finish = "O wins!"
             }
             if (i == 0) {
                 if (map[i][j] == 'X' && map[i][j] == map[i + 1][j] && map[i + 1][j] == map[i + 2][j]) {
-                    finish = "X wins"
+                    finish = "X wins!"
                 }
                 if (map[i][j] == 'O' && map[i][j] == map[i + 1][j] && map[i + 1][j] == map[i + 2][j]) {
-                    finish = "O wins"
+                    finish = "O wins!"
                 }
             }
         }
@@ -87,7 +87,7 @@ fun main() {
     while (true) {
         turn()
         checkMap()
-        if (finish != "Draw" || filledMap()) break
+        if (finish != "Draw!" || filledMap()) break
     }
     println(finish)
 }
