@@ -1,5 +1,6 @@
 # tic-tac-toe
 to-do:
+
 - mobile app
 - menu with statistics with data stored in an external text file (the shortest game etc.)
 - points counter
